@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lesson 10：先祖返りの確認と取り消し | Gitチュートリアル</title>
+  <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+  <header>
+    <h1>Lesson 10：先祖返りの確認と取り消し</h1>
+    <p>修正した内容が後の編集で古い状態に戻るケースを再現します。</p>
+    <p>エディタでこのファイルを開き、「チュートリアル10-1」から順番に進めてください。<br>2つ目以降の課題の表示用ソースはコメントアウトされています。</p>
+  </header>
+  <main>
+  <!--
+    【チュートリアル10-1】修正後に古い内容へ戻してしまう
+    1. git switch practice/yourname で未コミットの変更がないことを確認します。
+    2. 下の「古い連絡先」を「新しい連絡先」に変更し、git add lesson-10/index.html と git commit -m "連絡先を更新" を実行します。
+    3. 続いて、同じ行を「古い連絡先」に戻し、git add lesson-10/index.html と git commit -m "古い原稿を上書き（再現用）" を実行します。
+    4. 完了条件：更新のコミットは履歴に残っているが、画面は古い内容になっている。
+  -->
+  <section>
+    <h2>課題10-1：修正後に古い内容へ戻してしまう</h2>
+    <p>古い連絡先</p>
+  </section>
+  <!--
+    【チュートリアル10-2】原因を見つけて変更を取り消す
+    1. この課題のソースを囲むコメントは取り消し後に解除します。
+    2. git log -p -- lesson-10/index.html で、このファイルがどのコミットで古くなったか調べます。
+    3. git diff HEAD~1 HEAD -- lesson-10/index.html と git blame lesson-10/index.html でも変更箇所を確認します。blameの表示だけで責任や意図を決めつけないようにします。
+    4. 直前の再現用コミットだけを取り消すため、git log -1 で確認して git revert --no-edit HEAD を実行します。
+    5. 画面と履歴を確認した後、この課題のソースを囲むコメントを解除し、git add lesson-10/index.html と git commit -m "先祖返りの確認と取り消しを記録"、git push を実行します。
+    6. 完了条件：「新しい連絡先」に戻り、原因のコミットと取り消しのコミットを説明できる。
+    7. ブランチの位置を誤って動かしたケースでは git reflog でローカルのHEAD等の移動記録を調べ、必要なら git branch rescue/yourname <見つけたID> で保護します。reflogは未コミットの編集や、すべての他人の操作を復元する仕組みではありません。
+  -->
+  <!-- 次の課題のソース：この下のコメント開始行と、ソースの後のコメント終了行だけを削除します -->
+  <!--
+  <section>
+    <h2>課題10-2：原因を見つけて変更を取り消す</h2>
+    <p>履歴を調べて、古い内容への上書きを取り消しました。</p>
+  </section>
+  -->
+  <!-- 次の課題のソースはここまで -->
+  </main>
+  <nav><a href="../index.html">レッスン一覧</a> <a href="../lesson-09/index.html">前のレッスン</a></nav>
+</body>
+</html>

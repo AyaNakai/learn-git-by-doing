@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lesson 01：最初のコミット | Gitチュートリアル</title>
+  <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+  <header>
+    <h1>Lesson 01：最初のコミット</h1>
+    <p>作業ツリー → ステージ → コミットの流れを体験します。</p>
+    <p>エディタでこのファイルを開き、「チュートリアル1-1」から順番に進めてください。<br>2つ目以降の課題の表示用ソースはコメントアウトされています。</p>
+  </header>
+  <main>
+  <!--
+    【チュートリアル1-1】変更を確認する
+    1. git switch practice/yourname と git status で作業場所を確認します。
+    2. 下の「名前」と「ひとこと」を自分の自己紹介に変更し、保存してブラウザで確認します。
+    3. git diff -- lesson-01/index.html で、変更した行を確認します。
+    4. 完了条件：画面と差分に自分の自己紹介が表示される。
+  -->
+  <section>
+    <h2>課題1-1：変更を確認する</h2>
+    <div>
+      <h2>名前：ここを変更</h2>
+      <p>ひとこと：ここを変更</p>
+    </div>
+  </section>
+  <!--
+    【チュートリアル1-2】ステージして記録する
+    1. この課題のソースを囲むコメントを解除します。
+    2. git add lesson-01/index.html でステージします。
+    3. git diff --staged でコミットする内容を確認します。git diff は未ステージの差分を表示するので、空でも正常です。
+    4. git commit -m "自己紹介を追加" を実行します。
+    5. git status と git log -1 --oneline で結果を確認します。
+    6. 完了条件：変更が記録され、未コミットの変更がない。
+  -->
+  <!-- 次の課題のソース：この下のコメント開始行と、ソースの後のコメント終了行だけを削除します -->
+  <!--
+  <section>
+    <h2>課題1-2：ステージして記録する</h2>
+    <p>初めてのコミットを記録しました。</p>
+  </section>
+  -->
+  <!-- 次の課題のソースはここまで -->
+  </main>
+  <nav><a href="../index.html">レッスン一覧</a> <a href="../lesson-00/index.html">前のレッスン</a> <a href="../lesson-02/index.html">次のレッスン</a></nav>
+</body>
+</html>

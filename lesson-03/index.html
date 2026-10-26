@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lesson 03：リモートと同期する | Gitチュートリアル</title>
+  <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+  <header>
+    <h1>Lesson 03：リモートと同期する</h1>
+    <p>ローカルとGitHubの履歴を同期します。</p>
+    <p>エディタでこのファイルを開き、「チュートリアル3-1」から順番に進めてください。<br>2つ目以降の課題の表示用ソースはコメントアウトされています。</p>
+  </header>
+  <main>
+  <!--
+    【チュートリアル3-1】pushして確認する
+    1. 未コミットの変更がないことを確認します。
+    2. git push を実行します。
+    3. GitHubで practice/yourname を選び、lesson-02/index.html とコミット履歴を確認します。
+    4. 完了条件：ローカルで作成したコミットがGitHubでも見える。
+  -->
+  <section>
+    <h2>課題3-1：pushして確認する</h2>
+    <p>pushはコミットをリモートへ送る操作です。</p>
+  </section>
+  <!--
+    【チュートリアル3-2】fetchして取り込む
+    1. この課題のソースを囲むコメントはまだ解除しません。最初に未コミットの変更がないことを確認します。
+    2. GitHubの practice/yourname 上で、このファイルの下にある「同期前」を「同期できました」に編集し、同じブランチへ直接コミットします。
+    3. ローカルで git fetch origin を実行します。fetchだけでは作業ファイルは変わりません。
+    4. git log --oneline HEAD..origin/practice/yourname で取得したコミットを確認します。
+    5. git pull --ff-only で取り込みます。失敗したらローカル側にも独自コミットがないか確認し、この演習ではforce pushせず履歴を見比べます。
+    6. 取り込めたら、この課題のソースを囲むコメントを解除し、git add lesson-03/index.html と git commit -m "同期結果を表示"、git push を実行します。
+    7. 完了条件：画面に「同期できました」が表示され、未コミットの変更がないこと。
+  -->
+  <!-- 次の課題のソース：この下のコメント開始行と、ソースの後のコメント終了行だけを削除します -->
+  <!--
+  <section>
+    <h2>課題3-2：fetchして取り込む</h2>
+    <p>同期前</p>
+  </section>
+  -->
+  <!-- 次の課題のソースはここまで -->
+  </main>
+  <nav><a href="../index.html">レッスン一覧</a> <a href="../lesson-02/index.html">前のレッスン</a> <a href="../lesson-04/index.html">次のレッスン</a></nav>
+</body>
+</html>

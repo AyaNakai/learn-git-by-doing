@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lesson 02：変更を重ねる | Gitチュートリアル</title>
+  <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+  <header>
+    <h1>Lesson 02：変更を重ねる</h1>
+    <p>目的ごとにコミットを分け、履歴を読みます。</p>
+    <p>エディタでこのファイルを開き、「チュートリアル2-1」から順番に進めてください。<br>2つ目以降の課題の表示用ソースはコメントアウトされています。</p>
+  </header>
+  <main>
+  <!--
+    【チュートリアル2-1】見出しを変更する
+    1. 下の見出しを「わたしのGit練習帳」に変更します。
+    2. git diff で確認し、git add lesson-02/index.html と git commit -m "練習帳の見出しを変更" を実行します。
+    3. 完了条件：見出しの変更だけを記録したコミットがある。
+  -->
+  <section>
+    <h2>課題2-1：見出しを変更する</h2>
+    <h2>Git練習帳</h2>
+  </section>
+  <!--
+    【チュートリアル2-2】別の変更を記録する
+    1. この課題のソースを囲むコメントを解除します。
+    2. 下のp要素に style="color: teal;" を追加します。
+    3. git diff で確認し、git add lesson-02/index.html と git commit -m "練習メモに色を付ける" を実行します。
+    4. git log --oneline -5 と git show HEAD で履歴と最新の変更を確認します。
+    5. 完了条件：見出しと色の変更が別々のコミットになっている。
+  -->
+  <!-- 次の課題のソース：この下のコメント開始行と、ソースの後のコメント終了行だけを削除します -->
+  <!--
+  <section>
+    <h2>課題2-2：別の変更を記録する</h2>
+    <p>少しずつ変更を記録します。</p>
+  </section>
+  -->
+  <!-- 次の課題のソースはここまで -->
+  </main>
+  <nav><a href="../index.html">レッスン一覧</a> <a href="../lesson-01/index.html">前のレッスン</a> <a href="../lesson-03/index.html">次のレッスン</a></nav>
+</body>
+</html>

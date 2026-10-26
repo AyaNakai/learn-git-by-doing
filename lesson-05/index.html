@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lesson 05：Pull Request（任意） | Gitチュートリアル</title>
+  <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+  <header>
+    <h1>Lesson 05：Pull Request（任意）</h1>
+    <p>PRはGitHub上で変更の確認と統合を依頼する仕組みです。省略してlesson-06へ進んでも構いません。</p>
+    <p>エディタでこのファイルを開き、「チュートリアル5-1」から順番に進めてください。<br>2つ目以降の課題の表示用ソースはコメントアウトされています。</p>
+  </header>
+  <main>
+  <!--
+    【チュートリアル5-1】PR用の変更を作る
+    1. git switch practice/yourname で、未コミットの変更がないことを確認します。
+    2. git switch -c feature/yourname-lesson-05 を実行します。
+    3. 下の文章を「レビューをお願いします」に変更します。
+    4. git add lesson-05/index.html と git commit -m "レビュー用の文章を追加" を実行します。
+    5. git push -u origin feature/yourname-lesson-05 を実行します。
+    6. 完了条件：GitHubに作業ブランチがある。
+  -->
+  <section>
+    <h2>課題5-1：PR用の変更を作る</h2>
+    <p>レビュー用の文章です。</p>
+  </section>
+  <!--
+    【チュートリアル5-2】PRで統合する
+    1. この課題のソースを囲むコメントはPRのマージとpullが終わってから解除します。
+    2. 自分のFork内で、baseを practice/yourname、compareを feature/yourname-lesson-05 にしたPRを作成します。元の教材リポジトリ宛てにしないよう確認してください。
+    3. 目的・変更内容・確認したことを書き、Files changedで差分を読みます。
+    4. 自分で確認するか、協力者にレビューしてもらい、PRをマージします。
+    5. git switch practice/yourname と git pull --ff-only で反映します。
+    6. この課題のソースを囲むコメントを解除し、git add lesson-05/index.html と git commit -m "PRの完了を記録"、git push を実行します。
+    7. 完了条件：PRがMergedとなり、ローカルにも変更がある。
+  -->
+  <!-- 次の課題のソース：この下のコメント開始行と、ソースの後のコメント終了行だけを削除します -->
+  <!--
+  <section>
+    <h2>課題5-2：PRで統合する</h2>
+    <p>PRの差分を確認して統合しました。</p>
+  </section>
+  -->
+  <!-- 次の課題のソースはここまで -->
+  </main>
+  <nav><a href="../index.html">レッスン一覧</a> <a href="../lesson-04/index.html">前のレッスン</a> <a href="../lesson-06/index.html">次のレッスン</a></nav>
+</body>
+</html>

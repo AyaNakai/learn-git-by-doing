@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lesson 04：ブランチとマージ | Gitチュートリアル</title>
+  <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+  <header>
+    <h1>Lesson 04：ブランチとマージ</h1>
+    <p>変更を別のブランチで作り、専用のマージ先に取り込みます。</p>
+    <p>エディタでこのファイルを開き、「チュートリアル4-1」から順番に進めてください。<br>2つ目以降の課題の表示用ソースはコメントアウトされています。</p>
+  </header>
+  <main>
+  <!--
+    【チュートリアル4-1】作業ブランチで変更する
+    1. git switch practice/yourname と git status で、専用ブランチにいて未コミットの変更がないことを確認します。
+    2. git switch -c feature/yourname-lesson-04 で作業ブランチを作ります。
+    3. 下の文章を「ブランチで作った変更です」に変更します。
+    4. git add lesson-04/index.html と git commit -m "ブランチで案内文を変更" を実行します。
+    5. 完了条件：作業ブランチに新しいコミットがある。
+  -->
+  <section>
+    <h2>課題4-1：作業ブランチで変更する</h2>
+    <p>これからブランチで変更します。</p>
+  </section>
+  <!--
+    【チュートリアル4-2】専用ブランチへマージする
+    1. この課題のソースを囲むコメントはマージが終わってから解除します。
+    2. git switch practice/yourname で戻り、文章が変更前に戻ることを確認します。
+    3. git merge --no-ff feature/yourname-lesson-04 -m "lesson-04の変更を統合" を実行します。
+    4. git log --graph --oneline --all -12 で分岐と統合を確認します。
+    5. この課題のソースを囲むコメントを解除し、git add lesson-04/index.html と git commit -m "マージの完了を記録"、git push を実行します。
+    6. 完了条件：専用ブランチにも変更があり、マージコミットを確認できる。
+  -->
+  <!-- 次の課題のソース：この下のコメント開始行と、ソースの後のコメント終了行だけを削除します -->
+  <!--
+  <section>
+    <h2>課題4-2：専用ブランチへマージする</h2>
+    <p>ブランチの変更を統合しました。</p>
+  </section>
+  -->
+  <!-- 次の課題のソースはここまで -->
+  </main>
+  <nav><a href="../index.html">レッスン一覧</a> <a href="../lesson-03/index.html">前のレッスン</a> <a href="../lesson-05/index.html">次のレッスン</a></nav>
+</body>
+</html>

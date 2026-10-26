@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lesson 08：HEADと過去からの作業 | Gitチュートリアル</title>
+  <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+  <header>
+    <h1>Lesson 08：HEADと過去からの作業</h1>
+    <p>HEADは通常、現在のブランチを指します。ブランチはコミットを指す名前です。</p>
+    <p>エディタでこのファイルを開き、「チュートリアル8-1」から順番に進めてください。<br>2つ目以降の課題の表示用ソースはコメントアウトされています。</p>
+  </header>
+  <main>
+  <!--
+    【チュートリアル8-1】過去の内容を確認する
+    1. 未コミットの変更がないことを確認します。
+    2. git log --oneline -5 から、最新のものを避けて過去のコミットIDを1つ選び、メモします。以下の <過去のID> はその値に置き換えます。
+    3. git show <過去のID>:lesson-01/index.html で当時のファイルを確認します。lesson-01が存在するコミットを選んでください。
+    4. git switch --detach <過去のID> で当時に移動し、ブラウザを再読み込みして表示とgit statusを確認します。この状態のHEADはコミットを直接指します。
+    5. ここでは編集せず、git switch practice/yourname で戻ります。
+    6. 完了条件：過去の表示を確認し、元のブランチへ戻れた。
+  -->
+  <section>
+    <h2>課題8-1：過去の内容を確認する</h2>
+    <p>HEADは今の作業位置を示します。</p>
+  </section>
+  <!--
+    【チュートリアル8-2】過去から新しい作業を始める
+    1. git switch -c feature/yourname-lesson-08 <過去のID> で、先ほどの過去のコミットからブランチを作ります。
+    2. その時点の lesson-01/index.html の自己紹介に一文を加え、git add lesson-01/index.html と git commit -m "過去の状態から自己紹介を更新" を実行します。
+    3. git log --graph --oneline --all -15 で過去から分岐していることを確認します。
+    4. git switch practice/yourname で戻ります。この演習のブランチはマージせず、比較用に残します。
+    5. 戻ってからこの課題のソースを囲むコメントを解除し、git add lesson-08/index.html と git commit -m "過去からの分岐を記録"、git push を実行します。
+    6. 完了条件：過去を起点とする別ブランチにコミットがあり、元のブランチにも戻れた。
+    7. rebaseはコミットを別の土台へ積み直す操作です。この「過去から分岐」とは目的が異なるため、発展学習にします。
+  -->
+  <!-- 次の課題のソース：この下のコメント開始行と、ソースの後のコメント終了行だけを削除します -->
+  <!--
+  <section>
+    <h2>課題8-2：過去から新しい作業を始める</h2>
+    <p>過去のコミットから別の作業を始めました。</p>
+  </section>
+  -->
+  <!-- 次の課題のソースはここまで -->
+  </main>
+  <nav><a href="../index.html">レッスン一覧</a> <a href="../lesson-07/index.html">前のレッスン</a> <a href="../lesson-09/index.html">次のレッスン</a></nav>
+</body>
+</html>

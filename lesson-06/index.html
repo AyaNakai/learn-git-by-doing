@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lesson 06：競合を起こして解決する | Gitチュートリアル</title>
+  <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+  <header>
+    <h1>Lesson 06：競合を起こして解決する</h1>
+    <p>一人で2つの変更を作り、同じ行の競合を確実に再現します。</p>
+    <p>エディタでこのファイルを開き、「チュートリアル6-1」から順番に進めてください。<br>2つ目以降の課題の表示用ソースはコメントアウトされています。</p>
+  </header>
+  <main>
+  <!--
+    【チュートリアル6-1】同じ行を別々に変更する
+    1. git switch practice/yourname で未コミットの変更がないことを確認します。
+    2. git switch -c feature/yourname-lesson-06-a を実行します。
+    3. 下の「開催日は未定です」を「開催日は土曜日です」に変更し、git add lesson-06/index.html と git commit -m "開催日を土曜日に変更" を実行します。
+    4. git switch practice/yourname の後、git switch -c feature/yourname-lesson-06-b を実行します。Aから作らないことがポイントです。
+    5. 同じ行を「開催日は日曜日です」に変更し、git add lesson-06/index.html と git commit -m "開催日を日曜日に変更" を実行します。
+    6. 完了条件：同じ分岐元から作ったAとBで、同じ行の内容が異なる。
+  -->
+  <section>
+    <h2>課題6-1：同じ行を別々に変更する</h2>
+    <p>開催日は未定です</p>
+  </section>
+  <!--
+    【チュートリアル6-2】競合を解決する
+    1. この課題のソースを囲むコメントは、競合の解決後に解除します。
+    2. git switch practice/yourname の後、git merge feature/yourname-lesson-06-a を実行します。
+    3. git merge feature/yourname-lesson-06-b を実行すると、CONFLICTが発生します。git statusで確認します。
+    4. ファイル内の競合マーカー（小なり記号7個、等号7個、大なり記号7個）と両方の文章を確認します。
+    5. この演習では「開催日は土日です」を残す方針とし、競合マーカーと不要な行を消します。現実の作業では意図を確認して決めます。
+    6. ブラウザで表示を確認し、git add lesson-06/index.html と git commit -m "開催日の競合を解決" を実行します。
+    7. この課題のソースを囲むコメントを解除し、git add lesson-06/index.html と git commit -m "競合解決の完了を記録"、git push を実行します。
+    8. 完了条件：未コミットの変更がなく、画面に「開催日は土日です」が表示される。
+    9. 途中でマージをやり直す場合：解決コミット前なら git merge --abort でマージ開始前に戻せます。
+  -->
+  <!-- 次の課題のソース：この下のコメント開始行と、ソースの後のコメント終了行だけを削除します -->
+  <!--
+  <section>
+    <h2>課題6-2：競合を解決する</h2>
+    <p>両方の変更の意図を確認して解決しました。</p>
+  </section>
+  -->
+  <!-- 次の課題のソースはここまで -->
+  </main>
+  <nav><a href="../index.html">レッスン一覧</a> <a href="../lesson-05/index.html">前のレッスン</a> <a href="../lesson-07/index.html">次のレッスン</a></nav>
+</body>
+</html>

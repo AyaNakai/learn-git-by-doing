@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lesson 07：変更を取り消す | Gitチュートリアル</title>
+  <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+  <header>
+    <h1>Lesson 07：変更を取り消す</h1>
+    <p>未コミットの変更と、コミット済みの変更を区別して戻します。</p>
+    <p>エディタでこのファイルを開き、「チュートリアル7-1」から順番に進めてください。<br>2つ目以降の課題の表示用ソースはコメントアウトされています。</p>
+  </header>
+  <main>
+  <!--
+    【チュートリアル7-1】未コミットの変更を戻す
+    1. 下の文章を一時的に書き換え、git diffで確認します。まだコミットしません。
+    2. git add lesson-07/index.html の後、git restore --staged lesson-07/index.html でステージだけを解除します。編集は残ります。
+    3. git diffで確認したうえで git restore lesson-07/index.html を実行します。このファイルの未コミットの編集が破棄されます。
+    4. 完了条件：元の文章に戻り、未コミットの変更がない。残したい編集があるときはrestoreを実行しないでください。
+  -->
+  <section>
+    <h2>課題7-1：未コミットの変更を戻す</h2>
+    <p>この文章は元に戻す練習用です。</p>
+  </section>
+  <!--
+    【チュートリアル7-2】コミット済みの変更を打ち消す
+    1. この課題のソースを囲むコメントを解除し、git add lesson-07/index.html と git commit -m "取り消し演習の準備" を実行します。
+    2. 下の「正しい案内」を「間違った案内」に変更し、git add lesson-07/index.html と git commit -m "案内を変更（取り消し対象）" を実行します。
+    3. git log -1 --oneline で対象を確認してから git revert --no-edit HEAD を実行します。
+    4. git log --oneline -4 と git show HEAD を確認し、git pushします。
+    5. 完了条件：「正しい案内」に戻り、元のコミットと打ち消しコミットの両方が履歴にある。
+    6. 競合して中断したい場合は git revert --abort。resetとの比較は発展学習とします。
+  -->
+  <!-- 次の課題のソース：この下のコメント開始行と、ソースの後のコメント終了行だけを削除します -->
+  <!--
+  <section>
+    <h2>課題7-2：コミット済みの変更を打ち消す</h2>
+    <p>正しい案内</p>
+  </section>
+  -->
+  <!-- 次の課題のソースはここまで -->
+  </main>
+  <nav><a href="../index.html">レッスン一覧</a> <a href="../lesson-06/index.html">前のレッスン</a> <a href="../lesson-08/index.html">次のレッスン</a></nav>
+</body>
+</html>

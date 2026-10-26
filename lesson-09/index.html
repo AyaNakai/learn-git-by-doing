@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lesson 09：cherry-pick | Gitチュートリアル</title>
+  <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+  <header>
+    <h1>Lesson 09：cherry-pick</h1>
+    <p>別ブランチのコミットを1つ選んで取り込みます。</p>
+    <p>エディタでこのファイルを開き、「チュートリアル9-1」から順番に進めてください。<br>2つ目以降の課題の表示用ソースはコメントアウトされています。</p>
+  </header>
+  <main>
+  <!--
+    【チュートリアル9-1】2つの変更を用意する
+    1. git switch practice/yourname で未コミットの変更がないことを確認し、git switch -c feature/yourname-lesson-09 を実行します。
+    2. 下の「こんにちわ」を「こんにちは」に直し、git add lesson-09/index.html と git commit -m "あいさつの誤字を修正" を実行します。
+    3. git log -1 --oneline で修正コミットのIDをメモします。
+    4. 下の「追加のお知らせはありません」を「来週イベントを開催します」に変更し、git add lesson-09/index.html と git commit -m "イベント告知を追加" を実行します。
+    5. 完了条件：誤字修正と告知追加が別コミットになっている。
+  -->
+  <section>
+    <h2>課題9-1：2つの変更を用意する</h2>
+    <div>
+      <p>こんにちわ</p>
+      <p>追加のお知らせはありません</p>
+    </div>
+  </section>
+  <!--
+    【チュートリアル9-2】修正だけを取り込む
+    1. git switch practice/yourname の後、git cherry-pick -x <修正コミットのID> を実行します。
+    2. -x は元のコミットIDをコミットメッセージに追記する指定です。git show HEAD と画面で、誤字だけ直り、イベント告知は入っていないことを確認します。
+    3. この課題のソースを囲むコメントを解除し、git add lesson-09/index.html と git commit -m "cherry-pickの完了を記録"、git push を実行します。
+    4. 完了条件：修正だけ取り込まれ、元のコミットと取り込み先のコミットのIDが異なることを確認できる。
+    5. 競合した場合はlesson-06と同様に解決し、git addの後に git cherry-pick --continue。中断は git cherry-pick --abort。
+  -->
+  <!-- 次の課題のソース：この下のコメント開始行と、ソースの後のコメント終了行だけを削除します -->
+  <!--
+  <section>
+    <h2>課題9-2：修正だけを取り込む</h2>
+    <p>必要な変更だけを取り込みました。</p>
+  </section>
+  -->
+  <!-- 次の課題のソースはここまで -->
+  </main>
+  <nav><a href="../index.html">レッスン一覧</a> <a href="../lesson-08/index.html">前のレッスン</a> <a href="../lesson-10/index.html">次のレッスン</a></nav>
+</body>
+</html>
